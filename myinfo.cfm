@@ -84,13 +84,14 @@
 								<h1>The College of Engineering Scholarship Program</h1>						
                             </div>
 							<div class="row" style="margin-top:20px">
-								<p style="text-align: justify;">
+								<p style="text-align: justify;"><strong>
 
 
 								Completion of this scholarship application is for consideration of a College of Engineering scholarship for the Fall 2018 - Spring 2019 academic year, and should only be completed once. Priority consideration is given to those who apply on or before February 15, 2018. Applications received after the February 15, 2018 deadline will not be forwarded to departments as part of the initial awarding process, but will be held pending any remaining funds after the initial awarding. The fields below are populated directly from your MyUNLV student account, so if you see any errors in your personal information you will need to update on your MyUNLV student account, the College of Engineering cannot correct your personal information.  Complete the below questions to the best of your ability.
 
 
-								</p>
+                                </strong></p>
+                                <p style="text-align: justify;"><strong>Following the February 15 deadline, communication will be sent to your Rebelmail account confirming receipt of your application and anticipated awarding timeline. Applications received after February 15 may not receive communication confirming receipt of application.</strong></p>
 						    </div>
                     </fieldset>
 
