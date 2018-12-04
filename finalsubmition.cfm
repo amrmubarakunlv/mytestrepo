@@ -6,10 +6,8 @@
 		<div class="col-lg-8 col-lg-offset-2" align="left">	
 			<h4><b>
 			In an effort to be more environmentally friendly the College of Engineering Scholarship Coordinator will be providing scholarship updates 
-			and decisions to applicants via their UNLV Rebelmail account, and WILL NOT be sending award letters via the US postal system this year. <br>
-                <div style="color:red">
-			It is the applicant's responsibility to monitor their Rebelmail account for potential updates or award notifications.
-                </div>
+			and decisions to applicants via their UNLV Rebelmail account, and WILL NOT be sending award letters via the US postal system this year.  
+			It is the applicant's responsibility to monitor their Rebelmail account for potential updates or award notifications.	
 			</b></h4>
 		</div>
 	</div>
