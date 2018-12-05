@@ -3,7 +3,6 @@
 </cfoutput>
 <br>
 <div class="col-md-10 col-md-offset-1" style="margin-bottom:30px">
-
 		<div class="container">
 				
 				<div class="hidden-xs hidden-sm visible-md visible-lg">
@@ -45,16 +44,12 @@
 		</div>
 		
 </div>
-
-
-
 <div id="main" role="main">
 <div class="container">
 	
 <section id="widget-grid" class="">
 	
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-
 		<div class="jarviswidget jarviswidget-color-darken jarviswidget-sortable" id="wid-id-engineering-scholarship-app" 
 				data-widget-colorbutton="false" 
 				data-widget-togglebutton="false" 
@@ -70,11 +65,8 @@
 				</header>
 				<!-- widget div-->
 				<div role="content">
-
 					<div class="jarviswidget-editbox">
-
 					</div>
-
 					<div class="widget-body">
 			
 					<form action="<cfoutput>#rc.actionurl#</cfoutput>" class="smart-form" method="post" id="engineeringscholarshipform" enctype='multipart/form-data'>						
@@ -85,15 +77,10 @@
                             </div>
 							<div class="row" style="margin-top:20px">
 								<p style="text-align: justify;">
-
-
 								Completion of this scholarship application is for consideration of a College of Engineering scholarship for the Fall 2018 - Spring 2019 academic year, and should only be completed once. Priority consideration is given to those who apply on or before February 15, 2018. Applications received after the February 15, 2018 deadline will not be forwarded to departments as part of the initial awarding process, but will be held pending any remaining funds after the initial awarding. The fields below are populated directly from your MyUNLV student account, so if you see any errors in your personal information you will need to update on your MyUNLV student account, the College of Engineering cannot correct your personal information.  Complete the below questions to the best of your ability.
-
-
 								</p>
 						    </div>
                     </fieldset>
-
 					<fieldset>		
 						
 			         <div style="margin-left:50px;margin-right:50px;" align="left">
@@ -250,7 +237,6 @@
 															<label class="radio" align="left"><input name="citizenship" value="US" type="radio" onChange="changeicon('citizenship')" <cfif rc.data_userinfo.citizenship eq 'US'>checked</cfif> required><i></i>US Citizen</label>
 															<label class="radio" align="left"><input name="citizenship" value="NON-US" type="radio" onChange="changeicon('citizenship')" <cfif rc.data_userinfo.citizenship eq 'NON-US'>checked</cfif> required><i></i>Non-US Citizen</label>
 														</label>											
-
 													</div>
 	
 													<div class="col-md-1" align="right">
@@ -263,7 +249,6 @@
 												
 											</td>
 										</tr>
-
 			
 										<tr>
 											<td>
@@ -274,7 +259,6 @@
 												<input type="text" name="residency_text" placeholder="Not Available" value="#rc.residency_text#" size="40" style="background-color: transparent; border: 0px solid; color: black;" readonly>												
 											</td>
 										</tr>
-
                                         
 										<tr>
 											<td>
@@ -292,7 +276,6 @@
 														<label class="radio" align="left"><input name="class_year" value="graduate" type="radio" onChange="changeicon('class_year')" <cfif rc.data_userinfo.class_year eq 'graduate'>checked</cfif> required><i></i>Graduate Student</label>
 													</label>											
 												</div>
-
 												<div class="col-md-1" align="right">
  													<cfif #trim(rc.data_userinfo.gpa)# neq '' AND application.updaterecord> 
 	 													<i id="class_year_icon" class="fa fa-check txt-color-green"></i>
@@ -301,7 +284,6 @@
 	 												</cfif>
 																										
 												</div>
-
 												<cfelse>
 													<input type="text" name="class_year" placeholder="Not Available" value="#rc.data_userinfo.class_year#"  style="background-color: transparent; border: 0px solid; color: black;" readonly>
 												</cfif>
@@ -339,11 +321,9 @@
 																<select name="major" id="major" class="select2" onChange="validatedropdown('major')" required>
 																	<option value="0" selected="" disabled="Select Program" >Select Primary Major</option>
 																	<cfloop query="rc.majors">
-
 																        <cfinvoke method="CapFirst" component="engineering_scholarship.model.dbmain" returnvariable="vRUpdateStatus">	
 																	        <cfinvokeargument name="inputString" value="#program_longname#">	        			
 																        </cfinvoke>            
-
 																		<option value="#vRUpdateStatus#" <cfif rc.data_userinfo.major eq '#vRUpdateStatus#'>selected</cfif>>#program_longname#</option>
 																	</cfloop>
 																</select> 
@@ -365,7 +345,6 @@
 												</cfif>
 											</td>
 										</tr>
-
 										<tr>
 											<td>
 											   Name of High School
@@ -386,7 +365,6 @@
 												</cfif>
 											</td>
 										</tr>
-
 										<tr>
 											<td>
 											   City of High School
@@ -415,7 +393,6 @@
 											</td>
 											<td>
 												<div class="col-md-2">												
-
                                                 <cfif #trim(rc.data_userinfo.hs_gradyear)# eq '' OR application.updaterecord>
 													<label class="select" > 
 														<select name="highschoolgradyear" id="highschoolgradyear" class="form-control" style="font-size: medium" onChange="validatedropdown('highschoolgradyear')" required> 
@@ -436,11 +413,8 @@
 	                                            <cfelse>
 													<input type="text" name="highschoolgradyear" placeholder="Not Available" value="#rc.data_userinfo.hs_gradyear#"  style="background-color: transparent; border: 0px solid; color: black;" readonly>
 												</cfif>
-
-
 											</td>
 										</tr>
-
 			
 									</tbody>
 				
@@ -450,9 +424,7 @@
 			                  </cfoutput>
 			
 			   				  </div>
-
 							</fieldset>
-
 							<fieldset>
 									<div class="row" align="center">
 									    <a href="https://oit.unlv.edu/accounts/ace-students" class="btn btn-default btn-lg" value="" id="changemyinfobtn" name="changemyinfobtn" onclick="" style="font-size:20px"><b><span class="text-danger">EXIT - Take Me To MyUNLV</span></b></a>                		    
@@ -511,23 +483,18 @@
 				
 				</div>
 				
-
 	
-
 </div>
 					
 </div>
-
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
  
 	<script>
 	
 		function changeicon(fieldname){
 			$('#'+fieldname+'_icon').removeClass("fa-asterisk fa-lg txt-color-red").addClass("fa-check fa-lg txt-color-green");
 		}
-
 		function validatedropdown(fieldname){
 			var hasOption = true;
 			$('#'+fieldname).each(function(i, v){    
@@ -545,7 +512,6 @@
 	   		    $('#'+fieldname+'_icon').removeClass("fa-check fa-lg txt-color-green").addClass("fa-asterisk fa-lg txt-color-red");
 		    }				
 		}
-
 		function validatestringfield(fieldname){
 	            valid=false;
 		
@@ -560,7 +526,6 @@
 					first_valid=false;				
 			    }		 
 			}
-
 			function validatenumberfield(fieldname){
 	            valid=false;
 		
@@ -573,7 +538,6 @@
 					first_valid=false;				
 			    }		 
 			}
-
 			function validategpafield(fieldname){
 	            valid=false;
 		
@@ -586,7 +550,6 @@
 					first_valid=false;				
 			    }		 
 			}
-
 			function validatephonenumberfield(fieldname){
 	            valid=false;
 		
@@ -609,17 +572,14 @@
 			    var pattern = new RegExp(/^(1[0-2]|0[1-9]|\d)\/(20\d{2}|19\d{2}|0(?!0)\d|[1-9]\d)$/);
 			    return pattern.test(gdatestr);		    		    
 			};
-
 			function isValidNumber(num) {
 			    var pattern = new RegExp(/^[0-9]*$/);
 			    return pattern.test(num);		    		    
 			};
-
 			function isValidGPA(num) {
 			    var pattern = new RegExp(/^\d*\.?\d*$/);
 			    return pattern.test(num);		    		    
 			};
-
 			function isValidEmailAddress(emailAddress) {
 			    var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
 			    return pattern.test(emailAddress);
@@ -629,16 +589,13 @@
 			    var pattern = new RegExp(/^(?:(?:\+?1\s*(?:[.-]\s*)?)?(?:\(\s*([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9])\s*\)|([2-9]1[02-9]|[2-9][02-8]1|[2-9][02-8][02-9]))\s*(?:[.-]\s*)?)?([2-9]1[02-9]|[2-9][02-9]1|[2-9][02-9]{2})\s*(?:[.-]\s*)?([0-9]{4})(?:\s*(?:#|x\.?|ext\.?|extension)\s*(\d+))?$/);
 			    return pattern.test(phoneNumber);
 			};
-
 			function isValidPhoneNumberComplex(phoneNumber) {
 			    var pattern = new RegExp(/^\(?\d{1,3}\)?[- ]?\d{1,4}[- ]?\d{4,8}$/);
 			    return pattern.test(phoneNumber);
 			};
-
 			function capitaliseFirstLetter(string)
 			{
 			    return string.charAt(0).toUpperCase() + string.slice(1);
 			};
-
 	</script>
 	
